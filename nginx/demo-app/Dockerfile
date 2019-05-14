@@ -40,4 +40,4 @@ ENTRYPOINT [ "/entrypoint.sh" ]
 
 STOPSIGNAL SIGQUIT 
 
-CMD envsubst '\$AUTH_SERVICE' < /opt/bitnami/nginx/conf/nginx.conf > /opt/bitnami/nginx/conf/nginx.conf && /run.sh
+CMD envsubst '\$AUTH_SERVICE \$BACKEND' < /opt/bitnami/nginx/conf/nginx.conf > /opt/bitnami/nginx/conf/nginx.conf && /run.sh

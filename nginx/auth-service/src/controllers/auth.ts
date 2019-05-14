@@ -1,5 +1,15 @@
-import {IMiddleware} from "koa-router";
+import { IMiddleware } from "koa-router";
+import jwt from "jsonwebtoken";
+import { config } from "../config";
+
+const secret = config.get("jwtSecret");
 
 export const auth: IMiddleware = (ctx, _next) => {
-    ctx.status = Math.random() > 0.5 ? 200 : 401;
-}
+  const token = jwt.sign({
+    data: "the auth service"
+  }, secret, { expiresIn: '1h' });
+
+  ctx.set("x-auth-jwt", token);
+
+  ctx.status = 200;
+};
