@@ -2,11 +2,8 @@
 
 ## Running
 
-To build image:
-`docker build -t nginx-example:static-app .`
-
 To run:
-`docker run -p 3000:3000 nginx-example:static-app`
+`docker-compose up`
 
 ## Notes
 
