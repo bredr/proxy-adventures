@@ -2,6 +2,8 @@
 
 This example creates a simple auth end point which randomly decides if someone should have access to the webapp.
 
+<img src="./design.png" height=300>
+
 ## Running
 
 To run:
