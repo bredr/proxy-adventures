@@ -2,6 +2,8 @@
 
 This example creates a backend with simple auth end point which passes a signed JWT to the backend to validate the call to the backend. This creates trust inside the network of the application. The backend is also in the same proxy as the front end avoiding CORs related issues.
 
+<img src="./design.png" height=400>
+
 ## Running
 
 To run:
