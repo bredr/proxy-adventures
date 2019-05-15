@@ -1,5 +1,9 @@
 # Hosting a static app
 
+NGINX has a number of optimisations/ potential auth functionality for hosting static files (including web apps). This example demonstrates simple serving of a static web app.
+
+<img src="./design.png" height=300>
+
 ## Running
 
 To run:
