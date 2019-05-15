@@ -1,6 +1,6 @@
-# Authorising access to a static app
+# Securing backend access and reverse proxying
 
-This example creates a simple auth end point which randomly decides if someone should have access to the webapp.
+This example creates a backend with simple auth end point which passes a signed JWT to the backend to validate the call to the backend. This creates trust inside the network of the application. The backend is also in the same proxy as the front end avoiding CORs related issues.
 
 ## Running
 
@@ -13,3 +13,4 @@ To run:
 * Multistage builds enable the react app to be built in the image and only the static files copied across to the final image.
 * NGINX provides compression and in memory cache for faster application load times.
 * Proxying authorisation of requests can be split out from application ([docs](https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-subrequest-authentication/)).
+* JWT provide a means of validating requests betwee components in the system.

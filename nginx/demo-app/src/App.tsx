@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Hello} from './Hello';
 
 const App: React.FC = () => {
   return (
@@ -10,6 +11,7 @@ const App: React.FC = () => {
         <p>
           My simple react app
         </p>
+        <Hello/>
         <a
           className="App-link"
           href="https://reactjs.org"
