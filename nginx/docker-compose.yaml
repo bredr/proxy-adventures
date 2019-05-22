@@ -1,6 +1,7 @@
 version: '3'
 services: 
   web:
+    image: webapp:auth-backend
     build:
       context: ./demo-app
       dockerfile: Dockerfile
@@ -12,6 +13,7 @@ services:
     ports:
     - "3000:3000"
   auth:
+    image: auth:auth-backend
     build:
       context: ./auth-service
       dockerfile: Dockerfile
@@ -21,6 +23,7 @@ services:
     expose:
       - "8080"
   backend:
+    image: backend:auth-backend
     build:
       context: ./backend
       dockerfile: Dockerfile
