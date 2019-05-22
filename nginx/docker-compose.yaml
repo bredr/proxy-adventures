@@ -2,6 +2,7 @@
 version: '3'
 services: 
   web:
+    image: webapp:hosting-a-static-app
     build:
       context: ./demo-app
       dockerfile: Dockerfile
