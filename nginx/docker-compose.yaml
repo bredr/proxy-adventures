@@ -1,6 +1,7 @@
 version: '3'
 services: 
   web:
+    image: webapp:auth-endpoint
     build:
       context: ./demo-app
       dockerfile: Dockerfile
@@ -11,6 +12,7 @@ services:
     ports:
     - "3000:3000"
   auth:
+    image: auth:auth-endpoint
     build:
       context: ./auth-service
       dockerfile: Dockerfile
